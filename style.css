@@ -1,0 +1,411 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: Poppins-bold;
+    src: url(Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: Playfair display;
+    src: url(Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Playfair italic;
+    src: url(Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+.bg-color {
+    height: 100vh;
+    position: relative;
+    /* background: rgb(255, 255, 255); */
+    width: 100%;
+    background: url(./images/pexels-life-of-pix-6746.jpg);
+    max-width: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+.bg-color::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6)
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    /* position: fixed; */
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    color: #fff;
+}
+
+.logo {
+    font-family: "Playfair display", sans-serif;
+    font-size: 12px;
+    z-index: 10;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+.nav-links {
+    position: relative;
+    list-style: none;
+}
+.nav-links .active{
+   color: #d1d110;
+}
+.nav-links a {
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+}
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+    color: #d1d110;
+}
+
+.cta button {
+    position: relative;
+    z-index: 1000;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+    padding: 12px 40px;
+    background-color: #c3c30e;
+    border: none;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.cta button:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    background-color: #fff;
+    color: #c3c30e;
+}
+
+
+/* HERO CONTENT */
+.grid {
+    width: 100%;
+    position: absolute;
+    top: 30%;
+}
+.main-content {
+    position: relative;
+    top: 20%;
+    height: 60vh;
+    font-family: "poppins", sans-serif;
+    display: grid;
+    /* justify-content: space-between; */
+    grid-template-columns: repeat(2, 1fr);
+    /* border: 2px solid black; */
+}
+.main-info {
+    position: absolute;
+    top: 10%;
+    z-index: 12;
+    padding-left: 100px;
+    color: #fff;
+    /* border: 2px solid black; */
+}
+
+.main-info h1 {
+    font-family: "playfair display", sans-serif;
+    letter-spacing: 2px;
+    font-weight: 200;
+    font-size: 77px;
+}
+.main-info h3 {
+    font-family: "playfair display", sans-serif;
+    letter-spacing: 2px;
+    font-weight: 100;
+    font-size: 50px;  
+    line-height: .9;
+    margin-bottom: 20px;
+}
+.main-info p {
+    letter-spacing: 0.5px;
+    max-width: 440px;
+    margin-bottom: 20px;
+}
+
+.main-info button {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    border: none;
+    font-family: "poppins", sans-serif;
+    padding: 12px 40px;
+    border: 1px solid #c3c30e;
+    background: #c3c30e;
+    color: #fff;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+}
+.main-info button:hover {
+    border: 1px solid #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.img {
+    background: url(./images/baner.png);
+    /* object-fit: cover; */
+    max-width: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.section2 {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+    margin: 70px;
+    margin-top: 0;
+}
+.flex-1 h4 {
+    font-family: "playfair italic", sans-serif;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+.flex-2 h4 {
+    font-family: "playfair italic", sans-serif;
+    font-size: 50px;
+    margin-top: 10rem;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+.section2 p {
+    margin-bottom: 20px;
+}
+.flex-1 {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 10rem;
+}
+.flex-2 {
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: -6rem;
+}
+
+.img1 {
+    object-fit: cover;
+    background-size: cover;
+    width: 448px;
+    height: 500px;
+}
+
+.img3 {
+    object-fit: cover;
+    background-size: cover;
+    width: 448px;
+    height: 310px;
+}
+.img4 {
+    object-fit: cover;
+    background-size: cover;
+    width: 447px;
+    height: 560px;
+}
+.text {
+    font-family: "Poppins", sans-serif;
+    max-width: 400px;
+}
+
+.learn button {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    border: none;
+    background: #c3c30e;
+    padding: 10px 40px;
+    border: none;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+.learn button:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    background-color: #fff;
+    color: #e2e214;
+}
+.imgs-resize {
+    width: 448px;
+    height: 300px;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+.section2 h2 {
+    margin-bottom: 37px;
+    letter-spacing: 1px;
+}
+
+.section3 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 6rem;
+}
+
+.img5 {
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    width: 939px;
+    height: 500px;
+    margin: 0;
+}
+.section3 .border1 {
+    background: #ffffffa8;
+    padding: 30px 60px;
+}
+.border1 {
+    position: absolute;
+    top: 40%;
+    z-index: 90;
+}
+.border1 p {
+    padding-bottom: 5px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.call button {
+    color: #fff;
+    background: #000000;
+    letter-spacing: 1px;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    border: 1px solid black;
+    padding: 10px 40px;
+    transition: all 0.3s ease-in-out;
+}
+.call button:hover {
+    border: 1px solid #fff;
+
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    background-color: #fff;
+    color: #e2e214;
+}
+
+.rando {
+    font-family: "playfair italic", sans-serif;
+    font-size: 40px;
+    padding: 0 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6rem;
+    flex-direction: column;
+}
+
+.rando p {
+    max-width: 849px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+    text-align: center;
+}
+.stars {
+    font-size: 50px;
+}
+
+footer {
+    width: 100%;
+    bottom: 0;
+    background-color: #000000;
+    /* background: linear-gradient(to right, #d6d6d6, #ffffff); */
+    color: #ffffff;
+    padding: 40px 0 70px;
+    padding-bottom: 0;
+    font-size: 13px;
+    line-height: 20px;
+    padding-bottom: 3rem;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icons .fa-brands {
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 10px;
+    padding-bottom: 20px;
+}
+.footer-icons .fa-brands:hover {
+    color: #e2e214;
+}
+.footer-icons .footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+.footer-content p {
+    text-align: justify;
+    margin: 5px;
+}
+.hr {
+    line-height: 3;
+    content: "";
+    height: 1px;
+    width: 20%;
+    display: flex;
+    background-color: #373636;
+}
+
